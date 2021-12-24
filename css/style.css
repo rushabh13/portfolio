@@ -1588,13 +1588,14 @@ a:focus {
         line-height: 16px;
         padding: 0 5px;
     }
-    
-    .footer .footer-menu p a {
-        color: #0000ff;
-        font-weight: 600;
-    }
+}
 
-    .footer .footer-menu p a:hover {
-        color: #414141;
-    }
+
+.footer .footer-menu p a {
+    color: #ffffff;
+    font-weight: 600;
+}
+
+.footer .footer-menu p a:hover {
+    color: #414141;
 }
