@@ -91,7 +91,33 @@
         }
     });
     
-    
+    $(document).ready(function() {
+        var date1 = new Date("11/01/2020 00:00:00");
+        var date2 = new Date();
+        $('#lastExp').html(timeSince(date2.getTime() - date1.getTime()));
+        
+    });
+
+    function timeSince(millis) {
+
+      var seconds = Math.floor(millis / 1000);
+
+      var interval = seconds / (365 * 24 * 60 * 60);
+      var yearInInt = Math.floor(interval);
+      if (interval > 1) {
+        var year = Math.floor(interval) + " years ";
+        var intervalForMonths = seconds / (30 * 24 * 60 * 60);
+        if (intervalForMonths > 1) {
+          year += Math.abs((Math.floor(12*yearInInt)-Math.floor(intervalForMonths))) + " months";
+        }
+        return year;
+      }
+      
+      interval = seconds / (30 * 24 * 60 * 60);
+      if (interval > 1) {
+        return Math.floor(interval) + " months";
+      }
+    }
     
     // Portfolio filter
     var portfolioIsotope = $('.portfolio-container').isotope({
