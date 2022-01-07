@@ -326,9 +326,13 @@ a:focus {
     border-color: #ffffff;
 }
 
-/* .hero .hero-btn .btn:first-child {
+.hero .hero-btn .btn:first-child {
     margin-right: 10px;
-} */
+}
+
+.hero .hero-btn .btn:nth-child(2) {
+    margin-right: 10px;
+}
 
 @media (max-width: 991.98px) {
     .hero {
